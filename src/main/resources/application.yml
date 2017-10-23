@@ -1,0 +1,30 @@
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    encoding: UTF-8
+    suffix: .html
+    content-type: text/html
+    cache: false
+  http:
+    multipart:
+      max-file-size: 10Mb
+  profiles:
+    active: dev
+# 水水的证件相关配置
+watermark:
+  #文件上传相关配置
+  upload:
+    # 允许上传的文件类型
+    allowImageType:
+      - jpg
+      - jpeg
+      - bmp
+      - png
+  # 水印工厂相关配置
+  imageUtil:
+    # 字体
+    fontName: 宋体
+    # 字号
+    fontSize: 26
+    # 透明度
+    alpha: 0.45
